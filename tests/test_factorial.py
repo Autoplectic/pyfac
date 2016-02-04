@@ -35,9 +35,12 @@ good_results = {
 }
 
 def test_factorial_bad_inputs():
+    """
+    Test improper inputs to the factorial function.
+    """
     for n in bad_inputs:
-        assert_raises(NotImplementedError, factorial, n)
+        yield assert_raises, NotImplementedError, factorial, n
 
 def test_factorial_known_values():
     for n, val in good_results.iteritems():
-        assert_equal(factorial(n), val)
+        yield assert_equal, factorial(n), val
