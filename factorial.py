@@ -5,7 +5,7 @@ import operator
 try:
     reduce
 except NameError:
-    from functools import reduce
+    from functools import reduce # pylint:disable=redefined-builtin
 
 def is_nonneg_int(n):
     """
