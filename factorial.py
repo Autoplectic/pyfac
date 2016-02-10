@@ -2,6 +2,11 @@ import numbers
 
 import operator
 
+try:
+    reduce
+except:
+    from functools import reduce
+
 def is_nonneg_int(n):
     """
     Tests if `n` is a non-negative integer.
