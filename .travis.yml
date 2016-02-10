@@ -10,7 +10,7 @@ python:
   - "nightly" # currently points to 3.6-dev
 # command to install dependencies
 install:
-  - pip install coveralls
+  - pip install coverage coveralls
 # command to run tests
 script:
   - nosetests --with-coverage --cover-package=pyfac
