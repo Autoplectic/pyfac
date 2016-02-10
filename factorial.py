@@ -15,13 +15,10 @@ def is_nonneg_int(n):
     if not isinstance(n, numbers.Number):
         return False
     # If it is complex, is the imaginary part zero?
-    try:
-        if n.imag == 0:
-            n = n.real
-        else:
-            return False
-    except:
-        pass
+    if n.imag == 0:
+        n = n.real
+    else:
+        return False
     # If it is real, is the decimal part zero?
     try:
         if not n.is_integer():
