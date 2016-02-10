@@ -42,5 +42,5 @@ def test_factorial_bad_inputs():
         yield assert_raises, NotImplementedError, factorial, n
 
 def test_factorial_known_values():
-    for n, val in good_results.iteritems():
+    for n, val in good_results.items():
         yield assert_equal, factorial(n), val
