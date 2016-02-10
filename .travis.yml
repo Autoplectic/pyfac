@@ -12,4 +12,8 @@ python:
 install:
   - pip install coveralls
 # command to run tests
-script: nosetests --with-coverage --cover-package=pyfac
+script:
+  - nosetests --with-coverage --cover-package=pyfac
+# coverage reporting
+after_success:
+  - coveralls
