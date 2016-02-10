@@ -4,7 +4,7 @@ import operator
 
 try:
     reduce
-except:
+except NameError:
     from functools import reduce
 
 def is_nonneg_int(n):
@@ -23,7 +23,7 @@ def is_nonneg_int(n):
     try:
         if not n.is_integer():
             return False
-    except:
+    except AttributeError:
         pass
     # Is it non-negative?
     if n < 0:
