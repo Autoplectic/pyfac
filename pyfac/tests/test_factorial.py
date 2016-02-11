@@ -1,4 +1,4 @@
-from factorial import factorial
+from pyfac.factorial import factorial
 
 import numpy as np
 
